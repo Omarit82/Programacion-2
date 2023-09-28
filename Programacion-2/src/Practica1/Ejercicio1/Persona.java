@@ -1,7 +1,6 @@
 package Practica1.Ejercicio1;
 
 import java.time.LocalDate;
-import java.time.Month;
 
 public class Persona {
 
@@ -19,7 +18,7 @@ public class Persona {
     //private LocalDate birthDate = LocalDate.of(getYear(),getAge(),getDay());
     //----Constructor----
     public Persona(int dni){
-        setDni(dni);
+        this.dni = dni;
         day = 1;
         month = 1;
         year = 2000;
@@ -30,7 +29,7 @@ public class Persona {
         height = 1;
     }
     public Persona(int dni,String name,String lastName){
-        setDni(dni);
+        this.dni = dni;
         setName(name);
         setLastName(lastName);
         day = 1;
@@ -41,7 +40,7 @@ public class Persona {
         height = 1;
     }
     public Persona(int dni,String name,String lastName,int year,int month,int day){
-        setDni(dni);
+        this.dni = dni;
         setName(name);
         setLastName(lastName);
         setYear(year);
@@ -52,7 +51,7 @@ public class Persona {
         height = 1;
     }
     public Persona(int dni,String name,String lastName,int year,int month,int day,char sex){
-        setDni(dni);
+        this.dni = dni;
         setName(name);
         setLastName(lastName);
         setYear(year);
@@ -63,7 +62,7 @@ public class Persona {
         height = 1;
     }
     public Persona(int dni,String name,String lastName,int year,int month,int day,char sex,double weight,double height){
-        setDni(dni);
+        this.dni = dni;
         setName(name);
         setLastName(lastName);
         setYear(year);
@@ -81,9 +80,6 @@ public class Persona {
     }
     public int getDni() {
         return dni;
-    }
-    public void setDni(int dni) {
-        this.dni = dni;
     }
     public void setName(String name){
         this.name = name;
@@ -173,26 +169,34 @@ public class Persona {
 
     public String getCumpleannos(){
         LocalDate d1 = LocalDate.now();
-        Month mes = d1.getMonth();
-        int mesNumerico = 0;
-        switch (mes) {
-            case JANUARY: mesNumerico = 1; break;
-            case FEBRUARY: mesNumerico = 2; break;
-            case MARCH: mesNumerico = 3; break;
-            case APRIL: mesNumerico = 4; break;
-            case MAY: mesNumerico = 5; break;
-            case JUNE: mesNumerico = 6; break;
-            case JULY: mesNumerico =  7; break;
-            case AUGUST: mesNumerico = 8; break;
-            case SEPTEMBER: mesNumerico = 9; break;
-            case OCTOBER: mesNumerico = 10; break;
-            case NOVEMBER: mesNumerico = 11; break;
-            case DECEMBER: mesNumerico = 12; break;
-        }
-        if((d1.getDayOfMonth() == getDay())&&(getMes() == mesNumerico)){
+        int mes = d1.getMonthValue();
+        
+        if((d1.getDayOfMonth() == getDay())&&(getMes() == mes)){
             return "Feliz cumpleaños!";
         } else {
             return "Feliz no cumpleannos!";
         }       
+    }
+
+    public String getMayorEdad(){
+        LocalDate d2 = LocalDate.now();
+        int anno = d2.getYear();
+        if ((anno-getYear()>=18)){
+            if (d2.getMonthValue() <= getMes() ){
+                if((d2.getDayOfMonth() <= getDay())){
+                    return "Es mayor de edad";
+                }else{
+                    return "Aun le faltan dias para llegar a la mayoria de edad";
+                }   
+            }else {
+                return "Aun le faltan meses para llegar a la mayoria de edad";
+            }
+        }else{
+            return "Aun no es mayor de edad";
+        }
+    }
+
+    public String getInfo(){
+        return "Nombre: "+getName()+" - Apellido: "+getLastName()+" - DNI: "+getDni();
     }
 }
