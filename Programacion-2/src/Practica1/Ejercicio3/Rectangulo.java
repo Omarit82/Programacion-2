@@ -52,11 +52,7 @@ public class Rectangulo {
         this.pto2coorY = pto2coorY;
     }
 
-    /** La funcionalidad que debe proveer un rectángulo es la siguiente
-        ● Desplazarlo en el plano. Trasladar el rectángulo acorde a ciertos valores de X e
-        Y.
-        ● Calcular el Área del rectángulo.
-        ● Compararlo con otro rectángulo. Devolver 1 si el rectángulo es mayor, 0 si son
+    /** ● Compararlo con otro rectángulo. Devolver 1 si el rectángulo es mayor, 0 si son
         iguales y -1 si es menor. Se dice que un rectángulo es mayor que otro si el área
         del mismo es mayor que la del otro.
         ● Determinar si el rectángulo es un cuadrado, es decir, decidir si se cumplen las
@@ -65,11 +61,27 @@ public class Rectangulo {
         ● Determinar si está acostado o parado (si el alto es más que el ancho).
      */
 
+    /*  La funcionalidad que debe proveer un rectángulo es la siguiente
+        ● Desplazarlo en el plano. Trasladar el rectángulo acorde a ciertos valores de X e
+        Y.
+    */
+
     public void setDesplazamiento (double deltaX, double deltaY){
         setPto1coorX(pto1coorX+deltaX);
         setPto1coorY(pto1coorY+deltaY);
         setPto2coorX(pto2coorX+deltaX);
         setPto2coorY(pto2coorY+deltaY);
+    }
+
+    /*
+     *  ● Calcular el Área del rectángulo.
+     */
+
+    public double getAreaRectangulo() {
+        //Se calcula como lado por lado//
+        double lado1 = Math.sqrt(Math.pow((pto1coorX-pto2coorX), 2));
+        double lado2 = Math.sqrt(Math.pow((pto1coorY-pto2coorY), 2));
+        return lado1*lado2;
     }
     
 }

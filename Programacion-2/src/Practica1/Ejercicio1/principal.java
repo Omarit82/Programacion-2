@@ -38,7 +38,7 @@ public class principal {
         System.out.println(rect.getPto1coorX()+","+rect.getPto1coorY());
         System.out.println(rect.getPto2coorX()+","+rect.getPto2coorY());
 
-  
+        System.out.println("El area del cuadrilatero es: "+rect.getAreaRectangulo());
 
 
     }
