@@ -1,19 +1,16 @@
-package Practica4;
+package Practica4.AlarmaSensorial;
 
 public class Timbre {
-    private int decibeles;
     private boolean sonando;
 
 
-    public Timbre(int decibeles){
-        this.decibeles = decibeles;
+    public Timbre(){
         sonando=false;
     }
 
-    public int getDecibeles(){
-        return decibeles;
+    public boolean getSonando(){
+        return sonando;
     }
-
     public void hacerSonar(){
         sonando = true;
         System.out.println("Timbre sonando");

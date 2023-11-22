@@ -1,4 +1,4 @@
-package Practica4;
+package Practica4.Alarma;
 
 /**
  * Implementar en Java todo el código necesario para el funcionamiento de una alarma. La
@@ -13,15 +13,16 @@ package Practica4;
  */
 
 public class Alarma {
-   private boolean vidrio;
-   private boolean apertura;
-   private boolean movimiento;
-   private Timbre timbre;
+   protected boolean vidrio;
+   protected boolean apertura;
+   protected boolean movimiento;
+   protected Timbre timbre;
    
    public Alarma(){
       vidrio = true;
       apertura = true;
       movimiento = true;
+      timbre = new Timbre(100);
    }
 
    public void comprobar(){
@@ -33,4 +34,29 @@ public class Alarma {
       }
    }
 
+   public boolean isVidrio() {
+      return vidrio;
+   }
+
+   public void setVidrio(boolean vidrio) {
+      this.vidrio = vidrio;
+   }
+
+   public boolean isApertura() {
+      return apertura;
+   }
+
+   public void setApertura(boolean apertura) {
+      this.apertura = apertura;
+   }
+
+   public boolean isMovimiento() {
+      return movimiento;
+   }
+
+   public void setMovimiento(boolean movimiento) {
+      this.movimiento = movimiento;
+   }
+
+   
 }
