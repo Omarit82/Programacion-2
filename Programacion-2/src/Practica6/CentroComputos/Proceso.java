@@ -27,5 +27,10 @@ public class Proceso extends ElementoCola{
         Proceso a = (Proceso) e;
         return a.getMemoriaRequerida() < this.getMemoriaRequerida();
     }
+
+    public String toString(){
+        return "Id de Proceso: "+idProceso + "| Memoria requerida: " +memoriaRequerida+"\n";
+    }
+    
     
 }

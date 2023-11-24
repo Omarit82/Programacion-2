@@ -29,6 +29,8 @@ public class Computadora extends ElementoCola{
         return compu.getMemoria() < this.getMemoria();
     }
 
-    
+    public String toString(){
+        return "Id de Computadora: "+idComputadora + "| Memoria de computadora: " +memoria+"\n";
+    }
     
 }

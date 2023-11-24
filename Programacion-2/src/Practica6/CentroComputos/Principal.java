@@ -15,25 +15,23 @@ public class Principal {
         Proceso p1 = new Proceso(200);
         Proceso p2 = new Proceso(150);
         Proceso p3 = new Proceso(275);
+        Proceso p4 = new Proceso(120);
 
-        System.out.println(p1.getIdProceso());
-        System.out.println(p2.getIdProceso());
-        System.out.println(p3.getIdProceso());
-
-        System.out.println(p1.esMayor(p2));
-        System.out.println(p2.esMayor(p3));
 
         Computadora c1 = new Computadora(275);
         Computadora c2 = new Computadora(375);
         Computadora c3 = new Computadora(200);
         Computadora c4 = new Computadora(180);
-
-        System.out.println(c1.getIdComputadora());
-        System.out.println(c2.getIdComputadora());
-        System.out.println(c3.getIdComputadora());
-        System.out.println(c4.getIdComputadora());
-        
-        System.out.println(c1.esMayor(c4));
-        System.out.println(c1.esMayor(c2));
+        CentroComputo centro = new CentroComputo();
+        centro.addComputadora(c1);
+        centro.addComputadora(c2);
+        centro.addComputadora(c3);
+        centro.addComputadora(c4);
+       
+        centro.addProceso(p3);
+        centro.addProceso(p2);
+        centro.addProceso(p1);
+        centro.addProceso(p4);
+        System.out.println(centro);
     }
 }
