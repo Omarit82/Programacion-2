@@ -1,7 +1,7 @@
 package Practica7.Agroquimicos;
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto  implements Comparable<Producto>{
     /*Un producto químico tiene asociado un nombre,
     un conjunto cultivos donde se desaconseja su uso (por ejemplo girasol, lino, maíz), y un
     conjunto de estados patológicos que pueden observarse sobre los cultivos, y que es capaz de
@@ -28,5 +28,11 @@ public class Producto {
     }
     public void addEnfermedadesQueTrata(String e){
         sintomas.add(e);
+    }
+
+    @Override
+    public int compareTo(Producto o) {
+        //Aca debo definir como comparo dos Productos - Puede ser por nombre, por sintomas que atacan o cultivos desaconsejados 
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
     }
 }
