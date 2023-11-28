@@ -35,5 +35,7 @@ public class Persona {
         this.edad = edad;
     }
 
-    
+    public String toString(){
+        return "Apellido: "+getApellido() + " | Nombre: " + getNombre() + " | Edad: " + getEdad()+" | \n";
+    }
 }
