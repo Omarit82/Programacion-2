@@ -13,7 +13,6 @@ public abstract class ComparadorPersonas implements Comparator<Persona> {
         this.siguiente=siguiente;
     }
 
-
     public int compare(Persona p1, Persona p2){
         int aux = this.comparar(p1,p2);
         if(aux == 0){
