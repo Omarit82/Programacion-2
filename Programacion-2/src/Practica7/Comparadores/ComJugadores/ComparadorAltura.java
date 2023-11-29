@@ -15,4 +15,8 @@ public class ComparadorAltura extends ComparadorJugador {
     public int comparar(Jugador j1, Jugador j2){
         return (int) (j1.getAltura()-j2.getAltura());
     }
+
+    public ComparadorJugador getComparadorJugador(){
+        return siguiente;
+    }
 }

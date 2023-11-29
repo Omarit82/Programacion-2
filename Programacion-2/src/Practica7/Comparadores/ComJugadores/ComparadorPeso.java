@@ -14,5 +14,7 @@ public class ComparadorPeso extends ComparadorJugador{
     public int comparar(Jugador j1, Jugador j2){
         return (int) (j1.getPeso()-j2.getPeso());
     }
-    
+    public ComparadorJugador getComparadorJugador(){
+        return siguiente;
+    }
 }

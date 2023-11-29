@@ -14,10 +14,10 @@ public class Principal {
 
         System.out.println(jugadores);
         
-        ComparadorNombre com1 = new ComparadorNombre();
-        ComparadorGoles com2 = new ComparadorGoles(com1);
-        ComparadorAltura com3 = new ComparadorAltura(com2);
-        ComparadorPierna com4 = new ComparadorPierna(com3);
+        ComparadorJugador com1 = new ComparadorNombre();
+        ComparadorJugador com2 = new ComparadorGoles(com1);
+        ComparadorJugador com3 = new ComparadorAltura(com2);
+        ComparadorJugador com4 = new ComparadorPierna(com3);
 
         Collections.sort(jugadores,com4);
         System.out.println(jugadores);

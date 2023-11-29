@@ -14,5 +14,7 @@ public class ComparadorPierna extends ComparadorJugador {
     public int comparar(Jugador j1, Jugador j2){
         return j1.getPiernaHabil().compareTo(j2.getPiernaHabil());
     }
-    
+    public ComparadorJugador getComparadorJugador(){
+        return siguiente;
+    }
 }
