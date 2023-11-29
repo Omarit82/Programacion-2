@@ -3,19 +3,30 @@ import java.util.Comparator;
 
 public abstract class ComparadorPersonas implements Comparator<Persona> {
 
-    private Comparator<Persona> siguiente;
+    private ComparadorPersonas siguiente;
 
-    public ComparadorPersonas(Comparator<Persona> siguiente){
-        this.siguiente = siguiente;
+    public ComparadorPersonas(){ //Caso de que cree un Comparador sin siguiente.
+        siguiente =null;
     }
 
-    public int compare (Persona per1, Persona per2){
-       int resultado = this.comparar(per1,per2);
-       if(resultado == 0){
-        return siguiente.compare(per1,per2);
-       }
-       return resultado;
+    public ComparadorPersonas(ComparadorPersonas siguiente){ //Caso de que necesite un siguiente comparador.
+        this.siguiente=siguiente;
     }
 
-    public abstract int comparar(Persona per1,Persona per2);
+
+    public int compare(Persona p1, Persona p2){
+        int aux = this.comparar(p1,p2);
+        if(aux == 0){
+            if (siguiente != null){
+                return siguiente.compare(p1, p2);
+            } else {
+                return 0;
+            }
+        }
+        return aux;
+    }
+
+    
+    public abstract int comparar(Persona p1,Persona p2);
+    
 }

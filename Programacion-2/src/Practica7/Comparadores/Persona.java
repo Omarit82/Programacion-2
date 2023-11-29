@@ -1,22 +1,14 @@
 package Practica7.Comparadores;
 
-public class Persona {
-    private String apellido;
+public class Persona implements Comparable<Persona>{
     private String nombre;
+    private String apellido;
     private int edad;
-    
-    public Persona(String apellido,String nombre,int edad){
-        this.apellido = apellido;
+
+    public Persona(String nombre,String apellido,int edad){
         this.nombre = nombre;
-        this.edad = edad;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
         this.apellido = apellido;
+        this.edad = edad;
     }
 
     public String getNombre() {
@@ -27,6 +19,14 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     public int getEdad() {
         return edad;
     }
@@ -34,8 +34,15 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+    
+    @Override
+    public int compareTo(Persona p) {
+        return this.getApellido().compareTo(p.getApellido());
+    }
 
     public String toString(){
-        return "Apellido: "+getApellido() + " | Nombre: " + getNombre() + " | Edad: " + getEdad()+" | \n";
+        return "Apellido: "+this.getApellido()+" | Nombre: "+this.getNombre()+" | Edad: "+this.getEdad()+"||\n";
     }
+
+    
 }
