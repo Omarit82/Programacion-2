@@ -1,9 +1,15 @@
 package Practica7.Comparadores;
-import java.util.Comparator;
-public class ComparadorNombre implements Comparator<Persona> {
 
-    public int compare(Persona p1, Persona p2){
-        return p1.getNombre().compareTo(p2.getNombre());
+public class ComparadorNombre extends ComparadorPersonas {
+    public ComparadorNombre(){
+
+    }
+    public ComparadorNombre(ComparadorPersonas siguiente){
+        super(siguiente);
     }
     
+    public int comparar(Persona p1, Persona p2){
+        return p1.getNombre().compareTo(p2.getNombre());
+    }
+
 }
