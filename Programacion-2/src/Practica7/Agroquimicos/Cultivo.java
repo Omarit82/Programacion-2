@@ -37,7 +37,7 @@ public class Cultivo {
 
 
     public boolean productoUtil(Producto p){
-        if(p.estaDesaconsejadoEn(this)){
+        if(p.estaDesaconsejado(this)){
             return false;
         }else{
             return true;
