@@ -1,5 +1,6 @@
 package Practica7.Agroquimicos;
 import java.util.ArrayList;
+
 public class Cultivo {
     /* Un cultivo, tiene un nombre y una colección de enfermedades frecuentes que lo pueden
     afectar.  */
@@ -21,5 +22,17 @@ public class Cultivo {
 
     public void addEnfermedad(Enfermedad e){
         enfermedades.add(e);
+    }
+
+    public boolean tieneEnfermedad(Enfermedad e){
+        if(enfermedades.contains(e)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean equals(Cultivo c){
+        return this.getNombre().equals(c.getNombre());
     }
 }
