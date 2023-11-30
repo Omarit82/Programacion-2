@@ -42,10 +42,19 @@ public class Documento {
     }
 
     public boolean findKeyword(String keyword){
-        return keyword.contains(keyword);
+        return keywords.contains(keyword);
     }
 
     public String toString(){
         return "Titulo: "+getTitulo()+" | Contenido: "+ getContenido()+"\n";
     }
+
+    public boolean tieneKey(){
+        if(keywords.isEmpty()){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
 }

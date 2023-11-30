@@ -8,6 +8,9 @@ public class CriterioFrase extends Criterio {
         this.frase = frase;
     }
 
-    
+    @Override
+    public boolean cumple(Documento d) {
+        return d.getContenido().contains(frase);
+    }  
     
 }
