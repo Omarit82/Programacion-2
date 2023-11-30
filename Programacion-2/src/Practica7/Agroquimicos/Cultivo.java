@@ -41,6 +41,10 @@ public class Cultivo {
             return false;
         }else{
             //Si no esta desaconsejado. Debo obtener las enfermedades para las cuales el producto es efectivo.
+            for (Enfermedad enfermedad : enfermedades) {
+                
+            }
+
             //Recorro el arreglo de enfermedades y me quedo con un Array auxiliar de las enfermedades que el producto quimico ataca.
             //Si ese arreglo queda vacio, el producto no sirve - False- Si no esta vacio - True-
 

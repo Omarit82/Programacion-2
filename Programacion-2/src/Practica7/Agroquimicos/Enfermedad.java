@@ -24,4 +24,5 @@ public class Enfermedad {
     public boolean contieneSintoma(String sintoma){
         return sintomas.contains(sintoma);
     }
+
 }
