@@ -35,11 +35,15 @@ public class Cultivo {
         return this.getNombre().equals(c.getNombre());
     }
 
-
     public boolean productoUtil(Producto p){
+        //Debo indicar si el producto quimico pasado por parametro p, es util para las enfermedades del cultivo.
         if(p.estaDesaconsejado(this)){
             return false;
         }else{
+            //Si no esta desaconsejado. Debo obtener las enfermedades para las cuales el producto es efectivo.
+            //Recorro el arreglo de enfermedades y me quedo con un Array auxiliar de las enfermedades que el producto quimico ataca.
+            //Si ese arreglo queda vacio, el producto no sirve - False- Si no esta vacio - True-
+
             return true;
         }
     }
