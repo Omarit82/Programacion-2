@@ -18,4 +18,5 @@ public class RentableDos extends Criterio {
             return false;
         }
     }
+
 }
