@@ -22,4 +22,12 @@ public class Plataforma {
         }
         return auxiliar;
     }
+    /*Rentable */
+    public boolean rentable(Criterio criterio, Pelicula peli){
+        if(criterio.cumple(peli)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
