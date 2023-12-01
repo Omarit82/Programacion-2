@@ -1,6 +1,7 @@
 package Composite.Practica.Prefinal82023;
 import java.util.ArrayList;
 
+
 public class Coleccion extends ElementoColeccion{
     private ArrayList<ElementoColeccion> coleccion;
     private String nombreColeccion;
@@ -62,5 +63,6 @@ public class Coleccion extends ElementoColeccion{
         }
         return cumplen;
     }
+
 
 }

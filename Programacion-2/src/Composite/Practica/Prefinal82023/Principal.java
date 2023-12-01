@@ -8,6 +8,8 @@ public class Principal {
         Juguete cuatro = new Juguete("Acerino", "Mattel", 2000, 35000, 70);
 
         Coleccion halcones = new Coleccion("Halcones Galacticos");
+        Ordenador ordenador1 = new OrdenadorNombre();
+        Ordenador ordenador2 = new OrdenadorMarca(ordenador1);
 
         halcones.add(tres);
         halcones.add(cuatro);
