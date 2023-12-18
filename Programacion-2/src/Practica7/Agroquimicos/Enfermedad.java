@@ -21,8 +21,11 @@ public class Enfermedad {
     public void agregarSintoma(String sntm){
         sintomas.add(sntm);
     }
+    
     public boolean contieneSintoma(String sintoma){
         return sintomas.contains(sintoma);
     }
-
+    public int cantidadSintomas(){
+        return sintomas.size();
+    }
 }

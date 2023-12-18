@@ -8,6 +8,7 @@ public class Producto {
     private ArrayList<String>sintomasQueTrata;
 
     public Producto(String nombre){
+        this.nombre = nombre;
         cultivosDesaconsejados = new ArrayList<Cultivo>();
         sintomasQueTrata = new ArrayList<String>();
     }
@@ -33,6 +34,24 @@ public class Producto {
         }else{
             return false;
         }
-
     }
+
+    /*Le voy a pasar una enfermedad para que comparen sus sintomas. y responde si la cura o no */
+    public boolean cura(Enfermedad e){
+        int i = 0;
+        int contador = 0;
+        while (!sintomasQueTrata.isEmpty() && i<sintomasQueTrata.size()){
+            if(e.contieneSintoma(sintomasQueTrata.get(i))){
+                contador++;
+            }
+            i++;
+        }
+        if(contador == e.cantidadSintomas()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 }
