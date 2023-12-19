@@ -47,3 +47,6 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
             c:\> javac.exe miApp.java
         * Estp crea un archivo miApp.class. Se le indica a la VM que ejecute:
             c:\> java.exe miApp
+    
+    Metodos y Atributos : 
+        Los Atributos siempre seran privados. Para mantener el encapsulamiento.

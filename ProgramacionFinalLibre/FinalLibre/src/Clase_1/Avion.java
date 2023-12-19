@@ -14,17 +14,34 @@ public class Avion {
         color = "blanco";
         cantidadAsientos = 3;
         cantidadTripulacion = 1;
+        /* 
         balance = cantidadTripulacion / cantidadAsientos;
+        */
     }
+
     public Avion(int codigoId){
         this.codigoId = codigoId;
         color = "blanco";
         cantidadAsientos = 3;
         cantidadTripulacion = 1;
+        /*
         balance = cantidadTripulacion / cantidadAsientos;
+        */
+    }
+
+    public Avion(int codigoId,String color,int cantidadAsientos,int cantidadTripulacion){
+
     }
 
     /*Metodos */
+    public double getBalance(){
+        if(cantidadAsientos != 0){
+            return (double) cantidadTripulacion/cantidadAsientos;
+        }else {
+            return 0;
+        }
+    }
+
     public String getColor(){
         return color;
     }
@@ -46,23 +63,22 @@ public class Avion {
         this.cantidadAsientos = cantidadAsientos;
         balance = cantidadTripulacion / cantidadAsientos;
     }
-
+    /*Funcion */
     public int getCantidadTripulacion() {
         return cantidadTripulacion;
     }
-
+    /*Procedimiento */
     public void setCantidadTripulacion(int cantidadTripulacion) {
         this.cantidadTripulacion = cantidadTripulacion;
         balance = cantidadTripulacion / cantidadAsientos;
     }
 
-    public double getBalance(){
-        return balance;
-    }
-
     public static void main(String[] args) {
         Avion air314 = new Avion();
-
+        air314.setColor("negro");
+        air314.setColor("celeste");
+        System.out.println(air314.getColor());
+        System.out.println(air314.getBalance());
     }
     
 }
