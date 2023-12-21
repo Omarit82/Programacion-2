@@ -72,7 +72,7 @@ public class Persona {
         altura = 1;
     }
 
-    public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo,double peso,double altura){
+    public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo,double peso,double altura,int edad){
         fechaNacimiento = LocalDate.of(year, month, day); // Es importante poner este en la primer linea del constructor.
         this.dni = dni;
         this.nombre = nombre;
@@ -80,6 +80,7 @@ public class Persona {
         setSexo(sexo);
         setPeso(peso);
         setAltura(altura);
+        this.edad = edad;
     }
 
     /*Metodos */
@@ -239,6 +240,14 @@ public class Persona {
         "Edad: "+edad+"\n"+
         "Sexo: "+sexo+"\n"+
         "Altura: "+altura+", "+"Peso: "+peso;
+    }
+
+    public static void main(String[] args) {
+        Persona persona_1 = new Persona(29555208);
+        Persona persona_2 = new Persona(29555208, "Omar", "Roselli", 1982, 7, 11, "Masculino", 92, 1.93,41);
+        System.out.println(persona_1);
+        System.out.println(persona_2);
+        System.out.println(persona_2.esCoherente()+" "+persona_2.estaSaludable());
     }
 
 }
