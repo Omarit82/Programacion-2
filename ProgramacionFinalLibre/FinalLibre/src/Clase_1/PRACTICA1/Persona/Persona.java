@@ -6,14 +6,14 @@ public class Persona {
 
     /*Atributos */
 
-    private String nombre;
-    private String apellido;
+    private String nombre = "N";
+    private String apellido = "N";
     private long dni;
-    private int edad;
-    private LocalDate fechaNacimiento;
-    private String sexo;
-    private double peso;
-    private double altura;
+    private int edad = 0;
+    private LocalDate fechaNacimiento = LocalDate.of(2000,1,1);
+    private String sexo ="Femenino";
+    private double peso = 1;
+    private double altura = 1;
     public static final int MAYOR_EDAD = 18;
     public static final double LIMITE_INFERIOR = 18.5;
     public static final double LIMITE_SUPERIOR = 25;
@@ -24,63 +24,32 @@ public class Persona {
 
     public Persona (long dni){  //POR DEFECTO
         this.dni = dni;
-        fechaNacimiento = LocalDate.of(2000, 1, 1);
-        sexo ="Femenino";
-        nombre ="N";
-        apellido ="N";
-        peso = 1;
-        altura = 1;
     }
 
     public Persona(long dni,String nombre,String apellido){
-        this.dni = dni;
+        this(dni);
         this.nombre = nombre;
         this.apellido = apellido;
-        fechaNacimiento = LocalDate.of(2000, 1, 1);
-        sexo ="Femenino";
-        peso = 1;
-        altura = 1;
     }
 
     public Persona(long dni, String nombre,String apellido,int year,int month,int day){
-        fechaNacimiento = LocalDate.of(year, month, day); // Es importante poner este en la primer linea del constructor.
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        sexo ="Femenino";
-        peso = 1;
-        altura = 1;
+        this(dni, nombre, apellido);
+        fechaNacimiento = LocalDate.of(year, month, day);
     }
 
     public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo){
-        fechaNacimiento = LocalDate.of(year, month, day); // Es importante poner este en la primer linea del constructor.
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this(dni,nombre,apellido,year,month,day);
         setSexo(sexo);
-        peso = 1;
-        altura = 1;
     }
 
     public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo,double peso){
-        fechaNacimiento = LocalDate.of(year, month, day); // Es importante poner este en la primer linea del constructor.
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        setSexo(sexo);
+        this(dni,nombre,apellido,year,month,day,sexo);
         setPeso(peso);
-        altura = 1;
     }
 
     public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo,double peso,double altura,int edad){
-        fechaNacimiento = LocalDate.of(year, month, day); // Es importante poner este en la primer linea del constructor.
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        setSexo(sexo);
-        setPeso(peso);
+        this(dni,nombre,apellido,year,month,day,sexo,peso);
         setAltura(altura);
-        this.edad = edad;
     }
 
     /*Metodos */
