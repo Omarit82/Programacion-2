@@ -79,7 +79,7 @@ public class Electrodomestico {
     /* Atributos Funcionalidades */
 
     public boolean bajoConsumo(){
-        if(getConsumoElectrico()<BAJO_CONSUMO){
+        if(getConsumoElectrico() < BAJO_CONSUMO){
             return true;
         }else{
             return false;

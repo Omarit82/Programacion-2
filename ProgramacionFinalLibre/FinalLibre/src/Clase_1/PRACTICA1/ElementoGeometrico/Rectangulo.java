@@ -5,8 +5,8 @@ public class Rectangulo {
     /* Atributos */
     private PuntoGeometrico vertice1 = new PuntoGeometrico(0, 0); //Valor por defecto.
     private PuntoGeometrico vertice2 = new PuntoGeometrico(1, 1); //Valor por defecto.
-    private double lado1 = Math.sqrt(Math.pow(vertice1.getValorX()-vertice2.getValorX(), 2));
-    private double lado2 = Math.sqrt(Math.pow(vertice1.getValorY()-vertice2.getValorY(), 2));
+    private double lado1;
+    private double lado2;
     /* Con dos vertices queda definido un rectangulo. 
     Para que sea válido, tanto las coordenadas x como y deben ser diferentes. */
 
@@ -14,6 +14,8 @@ public class Rectangulo {
 
     public Rectangulo (PuntoGeometrico vertice1, PuntoGeometrico vertice2){
         setPuntosGeometricos(vertice1, vertice2);
+        this.lado1 = Math.sqrt(Math.pow(vertice1.getValorX()-vertice2.getValorX(), 2));
+        this.lado2 = Math.sqrt(Math.pow(vertice1.getValorY()-vertice2.getValorY(), 2));
     }
 
 
@@ -83,15 +85,24 @@ public class Rectangulo {
         if(lado1 < lado2){
             return lado2;
         }else{
-            return lado1;
+            if(lado1>lado2){
+                return lado1;
+            }else{
+                return 0;
+            }
         }
     }
 
     public String paradoAcostado(){
-        if(lado1 < lado2){
+        if(lado1 > lado2){
             return "El rectangulo esta acostado";
         }else{
-            return "El rectangulo esta parado";
+            if(lado1 < lado2){
+                return "El rectangulo esta parado";
+            }else{
+                return "Es un cuadrado marmota!";
+            }
+            
         }
     }
 

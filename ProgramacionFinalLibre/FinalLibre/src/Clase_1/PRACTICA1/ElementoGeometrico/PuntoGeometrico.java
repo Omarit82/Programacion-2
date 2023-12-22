@@ -37,8 +37,8 @@ public class PuntoGeometrico {
         valorY += deltaY;
     }
 
-    public double distanciaEuclidea(double xPrima, double yPrima){
-        return Math.sqrt(Math.pow((valorX-xPrima), 2)+Math.pow((valorY-yPrima), 2));
+    public double distanciaEuclidea(PuntoGeometrico punto2){
+        return Math.sqrt(Math.pow((valorX-punto2.getValorX()), 2)+Math.pow((valorY-punto2.getValorY()), 2));
     }
     
     public String toString(){

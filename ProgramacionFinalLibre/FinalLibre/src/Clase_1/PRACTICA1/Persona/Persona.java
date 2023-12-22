@@ -50,6 +50,7 @@ public class Persona {
     public Persona(long dni, String nombre,String apellido,int year,int month,int day,String sexo,double peso,double altura,int edad){
         this(dni,nombre,apellido,year,month,day,sexo,peso);
         setAltura(altura);
+        setEdad(edad);
     }
 
     /*Metodos */
@@ -138,52 +139,24 @@ public class Persona {
     }
 
     public boolean esMayorEdad(){
-        LocalDate actual = LocalDate.now();
-        if(actual.getYear() - fechaNacimiento.getYear() > MAYOR_EDAD){
+        if((this.esCoherente())&&(edad >= MAYOR_EDAD)){
             return true;
-        }else if (actual.getYear() - fechaNacimiento.getYear() < MAYOR_EDAD){
+        }else{
             return false;
-        }else {
-            if(actual.getMonthValue()>fechaNacimiento.getMonthValue()){
-                return true;
-            }else {
-                if(actual.getMonthValue()<fechaNacimiento.getMonthValue()){
-                    return false;
-                }else if(actual.getDayOfMonth()>=fechaNacimiento.getDayOfMonth()){
-                    return true;
-                }else {
-                    return false;
-                }       
-            }
         }
     }
 
     public boolean puedeVotar(){
-        LocalDate actual = LocalDate.now();
-        if(actual.getYear() - fechaNacimiento.getYear() > EDAD_VOTO){
+        if((this.esCoherente())&&(edad >= EDAD_VOTO)){
             return true;
-        }else if (actual.getYear() - fechaNacimiento.getYear() < EDAD_VOTO){
+        }else{
             return false;
-        }else {
-            if(actual.getMonthValue()>fechaNacimiento.getMonthValue()){
-                return true;
-            }else { 
-                if(actual.getMonthValue()<fechaNacimiento.getMonthValue()){
-                    return false;
-                }else { 
-                    if(actual.getDayOfMonth()>=fechaNacimiento.getDayOfMonth()){
-                        return true;
-                    }else {
-                        return false;
-                    }
-                }
-            }    
         }
     }
 
     public boolean esCoherente(){
         LocalDate actual = LocalDate.now();
-        if(actual.getYear() - fechaNacimiento.getYear() == edad){
+        if((actual.getYear() - fechaNacimiento.getYear() == edad)&&(actual.getMonthValue() >= fechaNacimiento.getMonthValue())&&(actual.getDayOfMonth() >= fechaNacimiento.getDayOfMonth())){
             return true;
         }else{
             if(actual.getYear() - fechaNacimiento.getYear() == edad+1){
@@ -210,13 +183,4 @@ public class Persona {
         "Sexo: "+sexo+"\n"+
         "Altura: "+altura+", "+"Peso: "+peso;
     }
-
-    public static void main(String[] args) {
-        Persona persona_1 = new Persona(29555208);
-        Persona persona_2 = new Persona(29555208, "Omar", "Roselli", 1982, 7, 11, "Masculino", 92, 1.93,41);
-        System.out.println(persona_1);
-        System.out.println(persona_2);
-        System.out.println(persona_2.esCoherente()+" "+persona_2.estaSaludable());
-    }
-
 }
