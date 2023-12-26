@@ -45,13 +45,16 @@ public class Episodio {
     public int getCalificacion() {
         return calificacion;
     }
-    public void setCalificacion(int calificacion) {
+    public String setCalificacion(int calificacion) {
         if(isFlag()){
             if((calificacion > MINIMO)&& (calificacion < MAXIMO) ){
                 this.calificacion = calificacion;
+                return "Calificacion: "+calificacion+" cargada al capitulo";
             }else{
-                System.out.println("La calificacion ingresada es incorrecta.");
+                return "La calificacion ingresada es incorrecta.";
             }
+        }else{
+            return "El capitulo aun no fue visto.";
         }
     }
     public int getTemporada() {
