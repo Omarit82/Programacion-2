@@ -1,4 +1,4 @@
-package Clase_1.PRACTICA2.JuegoDadosCubilete;
+package Clase_1.PRACTICA2.JuegoDadosMesa;
 
 public class Cubilete {
 

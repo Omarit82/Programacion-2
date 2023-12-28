@@ -36,7 +36,8 @@ public class Avion {
     /*Metodos */
     public double getBalance(){
         if(cantidadAsientos != 0){
-            return (double) cantidadTripulacion/cantidadAsientos;
+            this.balance = (double) cantidadTripulacion/cantidadAsientos;
+            return balance;
         }else {
             return 0;
         }
@@ -70,7 +71,7 @@ public class Avion {
     /*Procedimiento */
     public void setCantidadTripulacion(int cantidadTripulacion) {
         this.cantidadTripulacion = cantidadTripulacion;
-        balance = cantidadTripulacion / cantidadAsientos;
+        this.balance = cantidadTripulacion / cantidadAsientos;
     }
 
     public static void main(String[] args) {

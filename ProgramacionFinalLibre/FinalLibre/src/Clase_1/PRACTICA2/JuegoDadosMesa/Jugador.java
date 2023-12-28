@@ -1,4 +1,4 @@
-package Clase_1.PRACTICA2.JuegoDadosCubilete;
+package Clase_1.PRACTICA2.JuegoDadosMesa;
 
 public class Jugador {
 
@@ -25,7 +25,7 @@ public class Jugador {
     }
 
     public int usarCubilete(Cubilete cub){
-        System.out.println(this.getNombre());
+        //System.out.println(this.getNombre());
         return cub.lanzaDados();
     }
     

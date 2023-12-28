@@ -2,17 +2,24 @@ package Clase_1.PRACTICA2.JuegoDadosCubilete;
 
 public class Juego {
 
+    /*Atributos del juego */
     private Jugador jugador1;
     private Jugador jugador2;
     private Cubilete cubilete;
     private int cantidadRondas;
+    private int minimo;
 
-    public Juego(Jugador jugador1,Jugador jugador2,Cubilete cubilete,int cantidadRondas){
+    /*Constructor del Juego */
+
+    public Juego(Jugador jugador1,Jugador jugador2,Cubilete cubilete,int cantidadRondas,int minimo){
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         this.cubilete = cubilete;
         this.cantidadRondas = cantidadRondas;
+        this.minimo = minimo;
     }
+
+    /*Metodos del juego - Logica */
 
     public void setCantidadRondas(int cantidadRondas){
         this.cantidadRondas = cantidadRondas;
@@ -28,9 +35,9 @@ public class Juego {
         for(int i=0; i<cantidadRondas;i++){
             lanzamiento1 = jugador1.usarCubilete(cubilete);
             lanzamiento2 = jugador2.usarCubilete(cubilete);
-            if(lanzamiento1>lanzamiento2){
+            if((lanzamiento1>lanzamiento2)&&(lanzamiento1>=minimo)){
                 jugador1.sumarPunto();
-            }else if(lanzamiento1<lanzamiento2){
+            }else if((lanzamiento1<lanzamiento2)&&(lanzamiento2>=minimo)){
                 jugador2.sumarPunto();
             }
         }
