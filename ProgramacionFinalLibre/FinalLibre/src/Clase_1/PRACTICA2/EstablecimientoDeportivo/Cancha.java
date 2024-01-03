@@ -4,10 +4,14 @@ public class Cancha {
     
     private double precio;
     private String nombre;
+    private int qtySlots;
+    private Turno[] turnos;
 
-    public Cancha(String nombre, double precio){
+    public Cancha(String nombre, double precio,int qtySlots){
         this.precio = precio;
         this.nombre = nombre;
+        this.qtySlots=qtySlots;
+        turnos = new Turno[qtySlots];
     }
 
     public double getPrecio() {
@@ -26,5 +30,54 @@ public class Cancha {
         this.nombre = nombre;
     }
 
+    public int qtyTurnosDisponibles(){
+        boolean salida = false;
+        int i =0;
+        while((salida == false)&&(turnos.length>i)){
+            if(turnos[i] == null){
+                salida = true;
+            }else{
+                i++;
+            }
+        }
+        if(salida == true){
+            return qtySlots-i;
+        }else {
+            return 0;
+        }
+    }
+    public boolean turnoDisponible(){
+        boolean salida = false;
+        int i =0;
+        while((salida == false)&&(turnos.length>i)){
+            if(turnos[i] == null){
+                salida = true;
+            }else{
+                i++;
+            }
+        }
+        if(salida == true){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public void ocupaSlot(Turno tt){
+        boolean salida = false;
+        int i =0;
+        if(this.qtyTurnosDisponibles() != 0){
+            while((salida == false)&&(turnos.length>i)){
+                if(turnos[i] == null){
+                    salida = true;
+                }else{
+                    i++;
+                }
+            }
+        }
+        if (salida == true){
+            turnos[i] = tt;
+        }
+    }
     
 }
