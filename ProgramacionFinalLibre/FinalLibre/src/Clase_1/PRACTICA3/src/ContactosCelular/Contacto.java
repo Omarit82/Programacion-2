@@ -76,5 +76,17 @@ public class Contacto {
         return ciudad;
     }
 
-    
+    @Override 
+    public boolean equals(Object obj){
+        try {
+            Contacto nuevo = (Contacto) obj;
+            if((nuevo.getNombre().equals(this.getNombre()))&&(nuevo.getApellido().equals(this.getApellido()))&&(nuevo.getNumeroTelefono() == this.getNumeroTelefono())){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
