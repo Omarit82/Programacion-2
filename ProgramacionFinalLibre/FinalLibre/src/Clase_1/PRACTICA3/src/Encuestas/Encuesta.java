@@ -1,5 +1,8 @@
 package Encuestas;
-
+/*Una encuesta se compone de:
+un conjunto de preguntas,
+una persona encuestada y
+el empleado que realizo la encuesta. */
 public class Encuesta {
 
     /*Atributos */
