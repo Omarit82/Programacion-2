@@ -31,10 +31,10 @@ public class Principal {
 
         Juego supers = new Juego(player1, player2, mazoDeCartas);
 
-        mazoDeCartas.dealMazo(player1,player2);
+        supers.dealMazo();
 
-        //player1.mostrarMano();
-        //player2.mostrarMano();
+        player1.mostrarMano();
+        player2.mostrarMano();
         supers.mano();
    
         

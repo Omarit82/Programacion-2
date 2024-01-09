@@ -65,7 +65,7 @@ public class Jugador {
     
     
     public void mostrarMano(){
-        System.out.println("Las cartas del jugador: "+getNombre()+" son:");
+        System.out.println("Las cartas del jugador => "+getNombre()+" son:");
         for (Personaje carta : mano) {
             System.out.println(carta.getNombreReal()+" - "+carta.getNombreSuper());
         }
