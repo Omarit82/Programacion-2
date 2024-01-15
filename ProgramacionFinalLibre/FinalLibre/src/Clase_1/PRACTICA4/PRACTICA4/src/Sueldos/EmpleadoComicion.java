@@ -7,8 +7,8 @@ public class EmpleadoComicion extends Empleado {
     private int qVentas;
     private ArrayList<Double>ventas;
 
-    public EmpleadoComicion(double sueldoFijo,double porcentaje){
-        super(sueldoFijo);
+    public EmpleadoComicion(double sueldoFijo,double porcentaje,int dni){
+        super(sueldoFijo,dni);
         ventas = new ArrayList<>();
         this.porcentaje = porcentaje;
     }
