@@ -7,9 +7,11 @@ nuevos sensores. Modificar la alarma para que además de hacer sonar el timbre, 
 pantalla el nombre de la zona en conflicto (pueden ser más de una). */
 public class Sensor {
     private String zona;
+    private boolean estado;
 
     public Sensor(String zona){
         this.zona = zona;
+        this.estado = false;
     }
 
     public void setZona(String zona){
@@ -20,6 +22,15 @@ public class Sensor {
         return zona;
     }
 
-    
+    public boolean checkSensor(){
+        return estado;
+    }
+
+    public void activarSensor(){
+        estado = true;
+    }
+    public void resetSensor(){
+        estado = false;
+    }
     
 }
