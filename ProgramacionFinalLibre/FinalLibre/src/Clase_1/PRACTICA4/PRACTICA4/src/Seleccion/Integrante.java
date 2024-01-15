@@ -17,7 +17,7 @@ public class Integrante {
         this.apellido = apellido;
         this.pasaporte = pasaporte;
         fechaNacimiento = LocalDate.of(anio, mes, dia);
-        estado = estados[2];
+        estado = estados[1];
         this.concentrando = false;
     }
     public boolean disponible(){

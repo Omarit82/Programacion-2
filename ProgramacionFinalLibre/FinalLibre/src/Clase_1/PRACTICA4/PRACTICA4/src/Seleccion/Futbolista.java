@@ -36,8 +36,4 @@ public class Futbolista extends Integrante {
     public void setqGoles(int qGoles) {
         this.qGoles = qGoles;
     }
-
-
-    
-    
 }

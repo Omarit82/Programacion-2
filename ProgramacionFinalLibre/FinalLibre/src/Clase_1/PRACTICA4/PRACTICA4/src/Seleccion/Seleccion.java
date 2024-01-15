@@ -8,7 +8,9 @@ public class Seleccion {
     }
 
     public void agregarIntegrante(Integrante nuevo){
-        integrantes.add(nuevo);
+        if(!integrantes.contains(nuevo)){
+            integrantes.add(nuevo);
+        }
     }
 
     public boolean disponible(Integrante integrante){
