@@ -4,8 +4,8 @@ public class EmpleadoExtra extends Empleado {
     private int qtyHoras;
     private double extra;
 
-    public EmpleadoExtra(double sueldoFijo,int qtyHoras,double extra,int dni) {
-        super(sueldoFijo,dni);
+    public EmpleadoExtra(String nombre,double sueldoFijo,int qtyHoras,double extra,int dni) {
+        super(nombre,sueldoFijo,dni);
         this.qtyHoras = qtyHoras;
         this.extra = extra;
     }

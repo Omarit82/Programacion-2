@@ -4,21 +4,17 @@ import java.util.ArrayList;
 
 public class EmpleadoComicion extends Empleado {
     private double porcentaje;
-    private int qVentas;
     private ArrayList<Double>ventas;
 
-    public EmpleadoComicion(double sueldoFijo,double porcentaje,int dni){
-        super(sueldoFijo,dni);
+    public EmpleadoComicion(String nombre,double sueldoFijo,double porcentaje,int dni){
+        super(nombre,sueldoFijo,dni);
         ventas = new ArrayList<>();
         this.porcentaje = porcentaje;
     }
-    public void agregarVenta(double venta){
-        ventas.add(venta);
-    }
-
+   
     @Override
     public double getSueldo(){
-        double extra = 0;
+        double extra = 0.0;
         for (Double item : ventas) {
             extra += (item*porcentaje/100);
         }
@@ -33,12 +29,8 @@ public class EmpleadoComicion extends Empleado {
         this.porcentaje = porcentaje;
     }
 
-    public int getqVentas() {
-        return qVentas;
-    }
-
-    public void setqVentas(int qVentas) {
-        this.qVentas = qVentas;
+    public void agregarVenta(double venta){
+        ventas.add(venta);
     }
     
 }
