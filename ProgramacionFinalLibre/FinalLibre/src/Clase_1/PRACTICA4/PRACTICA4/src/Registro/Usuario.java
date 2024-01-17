@@ -4,13 +4,14 @@ public class Usuario extends Persona {
 
     private String nombreUsuario;
     private String password;
-
+    private String cargo;
+    
     public Usuario(String nombre, String apellido, int edad,String nombreUsuario,String password) {
         super(nombre, apellido, edad);
         this.nombreUsuario = nombreUsuario;
         this.password = password;
     }
-
+    
     public String getNombreUsuario() {
         return nombreUsuario;
     }
