@@ -1,4 +1,4 @@
-package CentroComputos;
+package CentroComputosV2;
 
 public class Computadora {
     /*Las computadoras disponibles para ejecutar procesos se ordenan en una cola que

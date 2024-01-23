@@ -1,4 +1,4 @@
-package CentroComputos;
+package CentroComputosV2;
 
 public class Proceso {
     private int id;
