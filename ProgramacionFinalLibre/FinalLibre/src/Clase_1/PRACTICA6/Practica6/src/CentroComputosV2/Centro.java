@@ -1,5 +1,6 @@
 package CentroComputosV2;
 /*2. Centro de Cómputos
+
 Un centro de cómputos se encarga de ejecutar procesos utilizando algunas de las
 computadoras que dispone. Si no hay computadoras disponibles los procesos a ejecutar deben
 esperar en una cola de espera que los ordena teniendo en cuenta sus requerimientos de
@@ -23,5 +24,12 @@ public class Centro {
 
     public void agregarProceso(Proceso p1){
        procesos.agregarProceso(p1);
+    }
+    public String listarComputadoras(){
+        return computadoras.listar();
+    }
+
+    public String listarProcesos(){
+        return procesos.listar();
     }
 }

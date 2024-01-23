@@ -5,6 +5,10 @@ public class ListaOrdenadaCompu {
 
     private ArrayList<Computadora> computadoras;
 
+    public ListaOrdenadaCompu(){
+        computadoras = new ArrayList<>();
+    }
+
     public void agregarCompu(Computadora c1){
         boolean encontro = false;
         int i = 0;
@@ -19,5 +23,13 @@ public class ListaOrdenadaCompu {
         if(!encontro){
             computadoras.add(c1);
         }
+    }
+
+    public String listar(){
+        String auxiliar ="";
+        for (Computadora computadora : computadoras) {
+            auxiliar += computadora;
+        }
+        return auxiliar;
     }
 }

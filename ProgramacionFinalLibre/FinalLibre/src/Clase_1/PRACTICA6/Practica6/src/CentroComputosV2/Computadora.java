@@ -25,5 +25,8 @@ prioriza la selección de las computadoras más rápidas */
         this.velocidad = velocidad;
     }
 
+    public String toString(){
+        return "Computadora: "+id+"| Velocidad: "+getVelocidad()+"\n";
+    }
     
 }

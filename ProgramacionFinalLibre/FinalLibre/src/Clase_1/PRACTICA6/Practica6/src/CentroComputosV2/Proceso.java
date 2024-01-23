@@ -22,5 +22,7 @@ public class Proceso {
     public void setMemoria(double memoria) {
         this.memoria = memoria;
     }
-
+    public String toString(){
+        return "Proceso: "+id+"| "+" Memoria: "+getMemoria()+"\n";
+    }
 }
