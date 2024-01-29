@@ -23,7 +23,12 @@ public class Centro {
     }
 
     public void agregarProceso(Proceso p1){
-       procesos.agregarItem(p1);
+        if(computadoras.tieneElementos()){
+            Computadora libre = (Computadora)computadoras.getSiguiente();
+            libre.ejecutarProceso(p1);
+        }else{
+            procesos.agregarItem(p1);
+        }
     }
     public String listarComputadoras(){
         return computadoras.listar();
@@ -32,4 +37,13 @@ public class Centro {
     public String listarProcesos(){
         return procesos.listar();
     }
+
+    public Computadora getSiguienteCompu(){
+        return (Computadora)computadoras.getSiguiente();
+    }
+
+    public Proceso getSiguienteProceso(){
+        return (Proceso)procesos.getSiguiente();
+    }
+
 }

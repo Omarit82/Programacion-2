@@ -20,6 +20,7 @@ public class Principal {
         Proceso pp2 = new Proceso(450);
         Proceso pp3 = new Proceso(750);
         Proceso pp4 = new Proceso(345);
+        
         centro.agregarProceso(pp1);
         centro.agregarProceso(pp2);
         centro.agregarProceso(pp3);

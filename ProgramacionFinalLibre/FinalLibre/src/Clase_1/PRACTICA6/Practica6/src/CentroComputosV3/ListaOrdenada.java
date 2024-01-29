@@ -25,6 +25,18 @@ public class ListaOrdenada {
         }
     }
 
+    public ElementoOrdenado getSiguiente(){
+        if(this.tieneElementos()){
+            return items.remove(0);
+        } else{
+            return null;
+        }
+    }
+
+    public boolean tieneElementos(){
+        return !items.isEmpty();
+    }
+
     public String listar(){
         String auxiliar="";
         for (Object item : items) {
