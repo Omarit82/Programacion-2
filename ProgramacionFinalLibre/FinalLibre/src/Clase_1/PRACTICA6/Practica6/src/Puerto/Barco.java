@@ -1,10 +1,10 @@
 package Puerto;
 
-public class TransporteCarga {
+public class Barco extends Transporte{
     private int capacidad;
     private String matricula;
 
-    public TransporteCarga(String matricula, int capacidad){
+    public Barco(String matricula, int capacidad){
         this.capacidad = capacidad;
         this.matricula = matricula;
     }
@@ -24,8 +24,4 @@ public class TransporteCarga {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-    
-    
-
-
 }
