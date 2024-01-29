@@ -1,6 +1,6 @@
 package CentroComputosV3;
 
-public class Computadora {
+public class Computadora extends ElementoOrdenado{
     /*Las computadoras disponibles para ejecutar procesos se ordenan en una cola que
 prioriza la selección de las computadoras más rápidas */ 
     private int id;
@@ -27,6 +27,11 @@ prioriza la selección de las computadoras más rápidas */
 
     public String toString(){
         return "Computadora: "+id+"| Velocidad: "+getVelocidad()+"\n";
+    }
+
+    @Override
+    public boolean esMayor(ElementoOrdenado elemento){
+        return this.getVelocidad()>((Computadora) elemento).getVelocidad();
     }
     
 }

@@ -5,15 +5,17 @@ public class Empleado {
     private String nombre;
     private String apellido;
     private int dni;
-    private double sueldo;
     private FormaPago fp;
 
-    public Empleado(String nombre, String apellido, int dni, double sueldo) {
+    public Empleado(String nombre, String apellido, int dni, double sueldoFijo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.sueldo = sueldo;
-        fp = new FormaPagoFijo(sueldo);
+        fp = new FormaPagoFijo(sueldoFijo);
+    }
+
+    public void setFormaPago(FormaPago nuevaForma){
+        fp = nuevaForma;
     }
 
     public String getNombre() {
@@ -43,11 +45,5 @@ public class Empleado {
     public double getSueldo() {
         return fp.calcularSueldo();
     }
-
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
-    }
-
-
     
 }

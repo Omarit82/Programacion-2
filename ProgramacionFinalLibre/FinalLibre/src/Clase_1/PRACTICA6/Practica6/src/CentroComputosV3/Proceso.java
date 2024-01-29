@@ -1,6 +1,6 @@
 package CentroComputosV3;
 
-public class Proceso {
+public class Proceso extends ElementoOrdenado{
     private int id;
     private static int contador=1;
     private double memoria;
@@ -24,5 +24,10 @@ public class Proceso {
     }
     public String toString(){
         return "Proceso: "+id+"| "+" Memoria: "+getMemoria()+"\n";
+    }
+
+    @Override
+    public boolean esMayor(ElementoOrdenado elemento){
+        return this.getMemoria()>((Proceso) elemento).getMemoria();
     }
 }

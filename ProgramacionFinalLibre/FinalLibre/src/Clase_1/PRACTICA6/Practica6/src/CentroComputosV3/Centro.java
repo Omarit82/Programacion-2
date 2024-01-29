@@ -10,20 +10,20 @@ prioriza la selección de las computadoras más rápidas */
 
 public class Centro {
     /*El centro debe tener una lista ordenada. */
-    private ListaOrdenadaCompu computadoras;
-    private ListaOrdenadaProcesos procesos;
+    private ListaOrdenada computadoras;
+    private ListaOrdenada procesos;
     
     public Centro(){
-        computadoras = new ListaOrdenadaCompu();
-        procesos = new ListaOrdenadaProcesos();
+        computadoras = new ListaOrdenada();
+        procesos = new ListaOrdenada();
     }
 
     public void agregarCompu(Computadora c1){
-        computadoras.agregarCompu(c1);
+        computadoras.agregarItem(c1);
     }
 
     public void agregarProceso(Proceso p1){
-       procesos.agregarProceso(p1);
+       procesos.agregarItem(p1);
     }
     public String listarComputadoras(){
         return computadoras.listar();
