@@ -24,4 +24,15 @@ public class Barco extends Transporte{
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    /*Comparo un barco con otro barco por su carga maxima. */
+    @Override
+    public boolean esMayor(Transporte tt){
+        return this.getCapacidad()>((Barco)tt).getCapacidad();
+    }
+
+    @Override
+    public String toString(){
+        return getMatricula()+" | "+getCapacidad()+"\n";
+    }
 }

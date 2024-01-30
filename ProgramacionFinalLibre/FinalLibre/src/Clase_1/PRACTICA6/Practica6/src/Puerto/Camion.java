@@ -1,24 +1,22 @@
 package Puerto;
 
-import java.time.LocalDate;
-
 public class Camion extends Transporte{
     
-    private LocalDate fechaCarga;
+    private int fechaCarga;
     private double capacidad;
     private String matricula;
 
-    public Camion(String matricula, double capacidad, LocalDate fechaCarga) {
+    public Camion(String matricula, double capacidad, int fechaCarga) {
         this.fechaCarga = fechaCarga;
         this.matricula = matricula;
         this.capacidad = capacidad;
     }
 
-    public LocalDate getFechaCarga() {
+    public int getFechaCarga() {
         return fechaCarga;
     }
 
-    public void setFechaCarga(LocalDate fechaCarga) {
+    public void setFechaCarga(int fechaCarga) {
         this.fechaCarga = fechaCarga;
     }
 
@@ -36,6 +34,17 @@ public class Camion extends Transporte{
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    /*Comparo un camion respecto otro camion dado. */
+    @Override
+    public boolean esMayor(Transporte tt){
+        return this.getFechaCarga() < ((Camion) tt).getFechaCarga();
+    }
+
+    @Override
+    public String toString(){
+        return getMatricula()+" | "+getCapacidad()+" | "+getFechaCarga()+"\n";
     }
     
 }
