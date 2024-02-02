@@ -1,6 +1,6 @@
 package CentroComputosV3;
 
-public class Proceso extends ElementoOrdenado{
+public class Proceso implements ElementoOrdenado{
     private int id;
     private static int contador=1;
     private double memoria;

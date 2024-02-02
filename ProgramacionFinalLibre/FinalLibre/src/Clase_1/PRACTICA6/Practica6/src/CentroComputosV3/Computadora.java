@@ -1,6 +1,6 @@
 package CentroComputosV3;
 
-public class Computadora extends ElementoOrdenado{
+public class Computadora implements ElementoOrdenado{
     /*Las computadoras disponibles para ejecutar procesos se ordenan en una cola que
 prioriza la selección de las computadoras más rápidas */ 
     private int id;
