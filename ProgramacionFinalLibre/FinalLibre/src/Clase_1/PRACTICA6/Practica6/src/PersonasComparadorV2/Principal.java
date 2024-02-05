@@ -1,6 +1,6 @@
 package PersonasComparadorV2;
 import java.util.ArrayList;
-import java.util.Comparator;
+
 
 public class Principal {
     
@@ -16,7 +16,7 @@ public class Principal {
         personas.add(tres);
         personas.add(cuatro);
 
-        Comparator<Persona> comp1 = new ComparadorApellido();
+    
         
     }
 }

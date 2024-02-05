@@ -1,4 +1,4 @@
-package ComparadorAutos;
+package Autos;
 
 public class Auto {
     private static int contador = 1;

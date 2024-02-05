@@ -1,6 +1,9 @@
-package ComparadorAutos;
+package Autos.Comparadores;
+
+import Autos.Auto;
 
 public class ComparadorAnio extends Comparador {
+
     public ComparadorAnio(){}
     public ComparadorAnio(Comparador siguiente){
         super(siguiente);
