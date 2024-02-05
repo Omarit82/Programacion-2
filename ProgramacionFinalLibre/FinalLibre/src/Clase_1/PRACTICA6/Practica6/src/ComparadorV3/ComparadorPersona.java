@@ -1,9 +1,9 @@
 package ComparadorV3;
 import java.util.Comparator;
 public abstract class ComparadorPersona implements Comparator<Persona>{
-
+    /*Atributos */
     private ComparadorPersona siguiente;
-
+    /*Constructores */
     public ComparadorPersona(ComparadorPersona siguiente){
         this.siguiente = siguiente;
     }
@@ -11,8 +11,10 @@ public abstract class ComparadorPersona implements Comparator<Persona>{
     public ComparadorPersona(){
         this.siguiente = null;
     }
-
+    /*Metodos implementados. */
     public abstract int comparar(Persona p1, Persona p2);
+
+    
     @Override
     public int compare(Persona o1, Persona o2) {
         int aux = comparar(o1, o2);
