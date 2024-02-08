@@ -1,4 +1,6 @@
-package ComparadorAutos;
+package Autos.Comparadores;
+
+import Autos.Auto;
 
 public class ComparadorColor extends Comparador {
     

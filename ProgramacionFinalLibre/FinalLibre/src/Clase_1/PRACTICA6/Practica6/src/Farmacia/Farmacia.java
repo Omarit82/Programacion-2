@@ -1,20 +1,30 @@
 package Farmacia;
 
+import java.util.ArrayList;
+
 public class Farmacia {
-    private Stock elementos;
+    private ArrayList<Medicamento> medicamentos;
 
     public Farmacia (){
-        elementos = new Stock();
+        medicamentos = new ArrayList<>();
     }
 
     /*Agregar un elemento al stock */
     public void addMed(Medicamento med){
-        elementos.addMedicamento(med);
+        if(!medicamentos.contains(med)){
+            medicamentos.add(med);
+        }
     }
 
     /* Consulta de labaratorio */
-    public void getLab(String lab){
-        elementos.getMedLaboratorio(lab);
+    public ArrayList<Medicamento> busqueda(Criterio crit){
+        ArrayList<Medicamento> aux = new ArrayList<>();
+        for (Medicamento item : medicamentos) {
+            if(crit.cumple(item)){
+                aux.add(item);
+            }
+        }
+        return aux;
     }
 
 }

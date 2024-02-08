@@ -1,6 +1,8 @@
-package ComparadorAutos;
+package Autos.Comparadores;
 
 import java.util.Comparator;
+
+import Autos.Auto;
 
 public abstract class Comparador implements Comparator<Auto>{
 

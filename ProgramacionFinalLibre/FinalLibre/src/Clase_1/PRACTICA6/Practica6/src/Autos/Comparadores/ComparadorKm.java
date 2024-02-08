@@ -1,6 +1,9 @@
-package ComparadorAutos;
+package Autos.Comparadores;
+
+import Autos.Auto;
 
 public class ComparadorKm extends Comparador{
+
     public ComparadorKm(){}
     public ComparadorKm(Comparador siguiente){
         super(siguiente);
