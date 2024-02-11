@@ -22,14 +22,22 @@ public class Producto{
     }
 
     public void addCultivosDesaconsejados(Cultivo cultivo){
-        if(cultivosDesaconsejados.contains(cultivo)){
+        if(!cultivosDesaconsejados.contains(cultivo)){
             cultivosDesaconsejados.add(cultivo);
         }
     }
     
     public void addEstadoPatologico(String patologia){
-        if(estadoPatologico.contains(patologia)){
+        if(!estadoPatologico.contains(patologia)){
             estadoPatologico.add(patologia);
+        }
+    }
+
+    public boolean contieneEstado(String estado){
+        if(estadoPatologico.contains(estado)){
+            return true;
+        }else{
+            return false;
         }
     }
 }

@@ -16,11 +16,15 @@ public class Cultivo {
     }
 
     public void agregarEnfermedad(Enfermedad enfermedad){
-        if(enfermedadesPosibles.add(enfermedad)){
+        if(!enfermedadesPosibles.add(enfermedad)){
             enfermedadesPosibles.add(enfermedad);
         }
     }
+    public boolean esUtil(Producto prod){
+        /* Debe decidir si al cultivo le es util el producto. */
+    }
 
+    
     @Override
     public boolean equals(Object cultivo){
         try {
