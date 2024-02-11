@@ -12,5 +12,25 @@ public class Producto{
         cultivosDesaconsejados = new ArrayList<>();
         estadoPatologico = new ArrayList<>();
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void addCultivosDesaconsejados(Cultivo cultivo){
+        if(cultivosDesaconsejados.contains(cultivo)){
+            cultivosDesaconsejados.add(cultivo);
+        }
+    }
+    
+    public void addEstadoPatologico(String patologia){
+        if(estadoPatologico.contains(patologia)){
+            estadoPatologico.add(patologia);
+        }
+    }
 }
 

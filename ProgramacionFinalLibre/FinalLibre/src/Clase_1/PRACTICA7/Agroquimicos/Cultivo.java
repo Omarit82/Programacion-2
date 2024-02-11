@@ -10,4 +10,23 @@ public class Cultivo {
         this.nombre = nombre;
         enfermedadesPosibles = new ArrayList<>();
     }
+
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void agregarEnfermedad(Enfermedad enfermedad){
+        if(enfermedadesPosibles.add(enfermedad)){
+            enfermedadesPosibles.add(enfermedad);
+        }
+    }
+
+    @Override
+    public boolean equals(Object cultivo){
+        try {
+            return this.getNombre().equals(((Cultivo)cultivo).getNombre());
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
