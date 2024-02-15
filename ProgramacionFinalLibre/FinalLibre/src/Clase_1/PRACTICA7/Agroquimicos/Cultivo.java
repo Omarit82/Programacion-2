@@ -53,4 +53,10 @@ public class Cultivo {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Cultivo [nombre=" + nombre + ", enfermedadesPosibles=" + enfermedadesPosibles + "]";
+    }
+    
 }

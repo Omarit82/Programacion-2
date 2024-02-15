@@ -54,4 +54,11 @@ public class Enfermedad {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Enfermedad [nombre=" + nombre + ", estadoPatologico=" + estadoPatologico + "]";
+    }
+
+    
 }

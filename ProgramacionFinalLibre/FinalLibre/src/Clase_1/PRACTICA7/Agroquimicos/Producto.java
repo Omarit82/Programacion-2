@@ -53,5 +53,12 @@ public class Producto{
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Producto [nombre=" + nombre + ", cultivosDesaconsejados=" + cultivosDesaconsejados
+                + ", estadoPatologico=" + estadoPatologico + "]";
+    }
+    
 }
 
