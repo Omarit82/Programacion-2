@@ -1,5 +1,9 @@
 package Agroquimicos;
-
+/*Una enfermedad tiene un nombre
+    asociado y un conjunto de estados patológicos que deben ser tratados. Por ejemplo:
+    Cochinilla (estados patológicos: deshidratación, hojas amarillas). Aclaración: los estado
+    patológicos de una enfermedad se corresponden con los estados patológicos que los
+    productos son capaces de tratar. */
 import java.util.ArrayList;
 
 public class Enfermedad {
@@ -21,7 +25,7 @@ public class Enfermedad {
         }
     }
     
-    public boolean contieneEstado(String estado){
+    public boolean generaSintoma(String estado){
         if(estadoPatologico.contains(estado)){
             return true;
         }else{
@@ -29,11 +33,12 @@ public class Enfermedad {
         }
     }
 
-    public boolean trataEnfermedad(Producto producto){
-        boolean trata = true;
+    public boolean esTratadaPor(Producto prod){
+        /*El producto pasado por parametro, trata la enfermedad? */
         int i=0;
-        while(i<estadoPatologico.size()&&trata){
-            if(!producto.contieneEstado(estadoPatologico.get(i))){
+        boolean trata = true;
+        while(trata && i<estadoPatologico.size()){
+            if(!prod.trataSintoma(estadoPatologico.get(i))){
                 trata = false;
             }
             i++;

@@ -1,5 +1,12 @@
 package Agroquimicos;
+/*  Un producto químico tiene asociado un nombre,
+    un conjunto cultivos donde se desaconseja su uso (por ejemplo girasol, lino, maíz), y un
+    conjunto de estados patológicos que pueden observarse sobre los cultivos, y que es capaz de
+    tratar (por ejemplo hojas amarillas, caída prematura de frutos, hojas mordidas, entre otros). 
 
+    Se considera que el agroquímico trata una enfermedad si todos los estados patológicos de la enfermedad están
+    contenidos por las acciones del producto químico. 
+*/
 import java.util.ArrayList;
 
 public class Producto{
@@ -32,8 +39,14 @@ public class Producto{
             estadoPatologico.add(patologia);
         }
     }
+    public boolean cultivoDesaconsejado(Cultivo cultivo){
+        return cultivosDesaconsejados.contains(cultivo);
+    }
+    public boolean trataEnfermedad(Enfermedad enfermedad){
+        return enfermedad.esTratadaPor(this);
+    }
 
-    public boolean contieneEstado(String estado){
+    public boolean trataSintoma(String estado){
         if(estadoPatologico.contains(estado)){
             return true;
         }else{
