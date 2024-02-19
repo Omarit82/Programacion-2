@@ -1,4 +1,6 @@
-package Vivero;
+package Vivero.Criterios;
+
+import Vivero.Planta;
 
 public class CriNombreVulgar extends Criterio{
     private String nombreVulgar;

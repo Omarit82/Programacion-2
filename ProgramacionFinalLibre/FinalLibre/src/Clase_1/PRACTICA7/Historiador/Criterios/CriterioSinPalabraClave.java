@@ -1,4 +1,6 @@
+package Historiador.Criterios;
 
+import Historiador.Documento;
 public class CriterioSinPalabraClave extends Criterio{
 
     public CriterioSinPalabraClave(){}

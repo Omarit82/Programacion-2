@@ -1,3 +1,6 @@
+package Historiador;
+
+import Historiador.Criterios.*;
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,5 +1,9 @@
 
+package Historiador;
+
 import java.util.ArrayList;
+
+import Historiador.Criterios.Criterio;
 
 public class Historiador {
     /*Un historiador desea digitalizar sus documentos y organizarlos de acuerdo a palabras clave.

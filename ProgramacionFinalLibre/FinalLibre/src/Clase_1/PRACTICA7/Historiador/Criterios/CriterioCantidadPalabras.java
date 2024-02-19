@@ -1,5 +1,6 @@
+package Historiador.Criterios;
 
-
+import Historiador.Documento;
 public class CriterioCantidadPalabras extends Criterio{
     
     private int numero;

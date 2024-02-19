@@ -9,11 +9,49 @@ destrucción 4, y así con cada una de las distintas fichas. También existen fi
 cuyo poder de destrucción se calcula como la fortaleza de la ficha, dividido el espacio que
 ocupan. */
 public class Ficha {
+    private String nombre;
     private int cantidadCasilleros;
     private int fortaleza;
     private int poderDestruccion;
 
-    public Ficha(int cantidadCasilleros,int fortaleza){
-        
+    public Ficha(int cantidadCasilleros,int fortaleza, int poderDestruccion, String nombre){
+        this.nombre = nombre;
+        this.cantidadCasilleros = cantidadCasilleros;
+        this.fortaleza = fortaleza;
+        this.poderDestruccion = poderDestruccion;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCantidadCasilleros() {
+        return cantidadCasilleros;
+    }
+
+    public void setCantidadCasilleros(int cantidadCasilleros) {
+        this.cantidadCasilleros = cantidadCasilleros;
+    }
+
+    public int getFortaleza() {
+        return fortaleza;
+    }
+
+    public void setFortaleza(int fortaleza) {
+        this.fortaleza = fortaleza;
+    }
+
+    public int getPoderDestruccion() {
+        return poderDestruccion;
+    }
+
+    public void setPoderDestruccion(int poderDestruccion) {
+        this.poderDestruccion = poderDestruccion;
+    }
+
+    
 }

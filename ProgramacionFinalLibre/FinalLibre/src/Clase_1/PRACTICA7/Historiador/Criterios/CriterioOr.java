@@ -1,3 +1,6 @@
+package Historiador.Criterios;
+
+import Historiador.Documento;
 public class CriterioOr extends Criterio{
     
     private Criterio crit1;

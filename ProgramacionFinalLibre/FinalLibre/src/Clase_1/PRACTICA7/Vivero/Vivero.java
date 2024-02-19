@@ -2,6 +2,8 @@ package Vivero;
 
 import java.util.ArrayList;
 
+import Vivero.Criterios.Criterio;
+
 /*Un vivero necesita un sistema que le permita cargar fichas de las diferentes plantas que
 vende. 
 

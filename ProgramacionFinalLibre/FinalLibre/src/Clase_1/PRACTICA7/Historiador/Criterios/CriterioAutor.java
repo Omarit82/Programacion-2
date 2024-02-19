@@ -1,4 +1,6 @@
+package Historiador.Criterios;
 
+import Historiador.Documento;
 public class CriterioAutor extends Criterio{
     private String autor;
     
