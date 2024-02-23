@@ -76,6 +76,9 @@ public class Socio {
         this.cuotaPaga = cuotaPaga;
     }
     
-
+    @Override
+    public String toString(){
+        return "Apellido: "+getApellido()+"\n"+"Nombre: "+getNombre()+"\n"+"Edad: "+getEdad()+"\n"+"Al dia: "+isCuotaPaga()+"\n";
+    }
     
 }

@@ -9,7 +9,7 @@ public class FiltroMenorEdad extends Filtro{
     }
 
     public boolean cumple(Socio socio){
-        return socio.getEdad()>edad;
+        return socio.getEdad()<edad;
     } 
     
 }

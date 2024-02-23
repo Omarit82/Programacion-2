@@ -7,6 +7,6 @@ public class FiltroCuotaImpaga extends Filtro{
     public FiltroCuotaImpaga(){}
 
     public boolean cumple(Socio socio){
-        return socio.isCuotaPaga();
+        return !socio.isCuotaPaga();
     }
 }

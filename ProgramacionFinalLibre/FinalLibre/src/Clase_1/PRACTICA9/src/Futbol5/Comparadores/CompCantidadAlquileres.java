@@ -8,7 +8,7 @@ public class CompCantidadAlquileres extends Comparador{
     }
     @Override
     public int compare(Socio socio1, Socio socio2){
-        return socio1.alquiloCancha(idCancha)-socio2.alquiloCancha(idCancha);
+        return socio2.alquiloCancha(idCancha) - socio1.alquiloCancha(idCancha);
     }
     
 }
