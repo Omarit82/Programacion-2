@@ -1,0 +1,14 @@
+{
+	"folders": [],
+	"settings": {
+		"java.project.sourcePaths": [
+			"src",
+			"Documentos",
+			"."
+		],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		]
+	}
+}
